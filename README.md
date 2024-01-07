@@ -11,7 +11,7 @@ python3 -m pip install --user qmk
 qmk setup --home /home/user/Documents/qmk_firmware
 sudo apt install libudev-dev
 sudo apt install cmake
-cd ~/Downloads
+cd /home/user/Documents/
 git clone --branch keychron_c3_pro https://github.com/Keychron/qmk_firmware.git
 cd /home/user/Documents/qmk_firmware/lib
 git clone https://github.com/qmk/ChibiOS.git
@@ -24,5 +24,5 @@ cd /home/user/Documents/qmk_firmware/
 make git submodule
 qmk compile -kb keychron/c3_pro/ansi/red -km default 
 qmk flash -kb keychron/c3_pro/ansi/red -km default
-unplug keyboard -> press button under space key -> plug keyboard back in -> should see keyboard flashing
+# run above flash command -> unplug keyboard -> press button under space key -> plug keyboard back in -> keyboard should start flashing
 ```
