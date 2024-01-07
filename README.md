@@ -1,10 +1,11 @@
-# QMK-Keychron_C3_Pro
-Build Keychron C3 Pro QMK
-# Quick and dirty way to compile and flash Keychron C3 Pro QMK firmware with linux (Ubuntu 22.04 and varients) 
+# Compile and flash QMK - Keychron C3 Pro firmware 
 
-*Disclaimer* There are surely better ways to do this, but I couldn't find anything on the internet about how to do this.
-Below is my _very_ hacky way of getting this Keychron fork to work
+### A quick & dirty way to create QMK firmware w/ Linux(Ubuntu 22.04,) using a Keychron QMK fork
 
+#### *Disclaimer - There are surely better ways of doing this, but I couldn't find anything on the internet, so here we are...*
+
+#### Below is my _very_ hacky way of getting QMK firmware flashed on the [Keychron C3 Pro](https://www.keychron.com/products/keychron-c3-pro-qmk-via-wired-mechanical-keyboard "Keychron C3 Pro") found on Amazon.
+```
 sudo apt install -y git python3-pip
 python3 -m pip install --user qmk
 qmk setup --home /home/user/Documents/qmk_firmware
@@ -24,3 +25,4 @@ make git submodule
 qmk compile -kb keychron/c3_pro/ansi/red -km default 
 qmk flash -kb keychron/c3_pro/ansi/red -km default
 unplug keyboard -> press button under space key -> plug keyboard back in -> should see keyboard flashing
+```
