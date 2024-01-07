@@ -24,5 +24,5 @@ cd /home/user/Documents/qmk_firmware/
 make git submodule
 qmk compile -kb keychron/c3_pro/ansi/red -km default 
 qmk flash -kb keychron/c3_pro/ansi/red -km default
-# run above flash command -> unplug keyboard -> press button under space key -> plug keyboard back in -> keyboard should start flashing
+# -> unplug keyboard -> press button under space key -> plug keyboard back in -> keyboard should start flashing
 ```
